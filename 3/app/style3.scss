@@ -1,0 +1,12 @@
+@import "mixin";
+
+.firstParagraph {
+  @include someStyle(15, 3)
+ 
+}
+.secondParagraph{
+   @include someStyle(50,5, hover) {
+    background-color: lightblue;     
+  }
+
+}

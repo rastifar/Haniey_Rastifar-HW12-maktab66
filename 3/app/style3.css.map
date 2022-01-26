@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,eAAe,CAAC;ECCZ,KAAK,EAAE,IAAI;EAGX,WAAW,EAAC,EAAc;CDD7B;;AACD,AAAA,gBAAgB,CAAA;ECHZ,KAAK,EAAE,IAAI;EAGX,WAAW,EAAC,GAAc;CDK7B;;AALD,ACGQ,gBDHQ,ACGP,MAAM,CAAK;EDDhB,gBAAgB,EAAE,SAAS;CCGtB",
+    "sources": [
+        "style3.scss",
+        "_mixin.scss"
+    ],
+    "names": [],
+    "file": "style3.css"
+}

@@ -4,9 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./2.css">
     <title>2</title>
 </head>
 <body>
-    
+    <div class="container">
+        <pre class="code">
+1- function timeoutPromiseResolve(interval) {
+         return new Promise((resolve, reject) => {
+            setTimeout(function () {
+              resolve("successful");
+             }, interval);
+         });
+      }
+              
+2- function timeoutPromiseReject(interval) {
+          return new Promise((resolve, reject) => {
+            setTimeout(function () {
+              reject("error");
+             }, interval);
+         });
+     }
+              
+ 3- function timeTest() {
+        timeoutPromiseResolve(5000);
+        timeoutPromiseReject(2000);
+        timeoutPromiseResolve(3000);
+    }
+              
+4- let startTime = Date.now();
+
+5- timeTest()
+.then(() => {})
+.catch((e) => {
+console.log(e);
+ let finishTime = Date.now();
+ let timeTaken = finishTime - startTime;
+alert("Time taken in milliseconds: " + timeTaken);
+  });
+              
+        </pre>
+        <div class="text">
+        <p class="explan">
+            داخل قطعه کدهای شماره 1 و2 یک شی promise ایجاد شده است.(این شی به عنوان ورودی 2 تابع callback با نام ها resolveو reject گرفته است که در هر کدام  از این دو تابع(timeoutPromiseResolveوtimeoutPromiseReject) از یکی از این دو تابع استفاده شده (هر promise دو حالت بعد از اجرا دارد یا با موفقیت به اتمام رسیده است و یا به مشکلی برخورده است ، به همین دلیل می توانیم برای هر کدام از حالت ها به دلخواه قطعه کدی تعریف کنیم که در اینجا برای حالت موفقیت کلمه successful نمایش داده میشود و برای حالت شکست پیام error به بیانی دیگر قطعه کدهای شماره های 1 و 2 دو تابع مربوط به promise هستند که در مواقع Resolve و یا Reject می توان از انها استفاده کرد)
+
+        </p>
+        <p class="explan">
+            در خط 5 تابع timeTest صدا زده می شود که داخل این تابع ما توابع آسنکرونی را اجرا میکنیم که برای ما خروجی از جنس promise دارند و در لحطه فراخوانی انها یک زمان برای تابع setTimeout به انها داده می شود .بر روی خروجی این تابع (خط 5) که قرار بوده است که از نوع promise باشد از دو متد then و catch از promise ها استفاده شده که در حالتی که خروجی تابع timeTest از نوع موفقیت امیز باشد قطعه کد ها ی مربوط به then ا می شود و در صورتیکه به شکست مواجه شود پیام های خطایی که به عنوان error داده ایم نمایش داده می شود و زمان  قبل از صدا زدن تابع timeTest  و بعد از ان اندازه گیری شده تا با تفاضل از هم طول مدت زمان اجرا محاسبه شود)
+        </p>
+        <p class="explan">
+            ولی از انجایی که داخل تابع timeTest ما چیزی را return نکرده ایم خروجی undefined است 
+        </p>
+    </div>
+    </div>
+    <script src="./2.js"></script>    
 </body>
 </html>

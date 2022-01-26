@@ -1,0 +1,27 @@
+
+
+@mixin someStyle ($x,$y,$pesudo:false) {
+    width: 100%;
+    // padding-top:#{$x/ $y}#{%};
+    // padding-top:#{($x/ $y)}%;
+    padding-top:#{($x/ $y)}(%);
+  
+    @if $pesudo != false{
+        &:#{$pesudo}{
+            @content;       
+        }
+    }
+   
+}
+
+@mixin up-size($size, $isFontBold:false){
+    @media (min-width: #{$size}px) {
+      @content;
+      @if $isFontBold == true{
+        body{
+          font-weight: bold;
+        }
+      }
+  
+    }
+  }

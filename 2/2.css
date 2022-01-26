@@ -1,0 +1,30 @@
+*{
+    margin:0;
+}
+.container{
+    display:flex;
+}
+.code{
+    direction: ltr;
+    font-size: 20px;
+    color: #534DF7;
+    background-color: azure;
+    padding:10px;
+    justify-content: left;
+    margin-right: 2px;
+    border-right: 1px solid rgb(245, 245, 251);
+   
+    
+}
+.explan{
+    margin-left: 2px;
+    direction: rtl;
+    font-size: 22px;
+    color: rgb(68, 67, 67);
+    line-height: 1.5em;
+    padding:10px;
+    justify-content: right;
+}
+.text{
+    background-color: blanchedalmond;
+}

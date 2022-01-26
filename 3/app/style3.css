@@ -1,0 +1,14 @@
+.firstParagraph {
+  width: 100%;
+  padding-top: 5%;
+}
+
+.secondParagraph {
+  width: 100%;
+  padding-top: 10%;
+}
+
+.secondParagraph:hover {
+  background-color: lightblue;
+}
+/*# sourceMappingURL=style3.css.map */
